@@ -30,6 +30,7 @@ export interface Exercise {
   equipment: Equipment;
   category: ExerciseCategory;
   isCustom: boolean;
+  userId?: string | null;
 }
 
 // --- Workout Template (Plan) ---

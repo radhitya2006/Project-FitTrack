@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useActiveWorkoutStore } from '../../../stores/activeWorkoutStore';
 import { BottomSheet } from '../../ui/BottomSheet/BottomSheet';
-import { Button } from '../../ui/Button/Button';
 import styles from './FAB.module.css';
 import sheetStyles from './FABSheet.module.css';
 
