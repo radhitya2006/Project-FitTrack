@@ -1,0 +1,41 @@
+/* ============================================================
+   FitTrack — App Layout
+   ============================================================ */
+
+.layout {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.topBar > * {
+  pointer-events: auto;
+}
+
+.content {
+  flex: 1;
+  padding-bottom: calc(var(--tab-bar-height) + var(--safe-area-bottom) + var(--space-4));
+}
+
+/* Desktop: offset for side rail */
+@media (min-width: 1025px) {
+  .topBar {
+    left: 80px;
+  }
+
+  .content {
+    margin-left: 80px;
+    padding-bottom: var(--space-4);
+  }
+}

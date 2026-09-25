@@ -1,0 +1,48 @@
+/* ============================================================
+   FitTrack — FAB (Floating Action Button)
+   ============================================================ */
+
+.fab {
+  position: fixed;
+  bottom: calc(var(--tab-bar-height) + var(--safe-area-bottom) + var(--space-4));
+  right: var(--space-4);
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-xl);
+  background: var(--accent);
+  color: var(--text-on-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-fab);
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.4),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fab:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fab:active {
+  transform: scale(0.95);
+}
+
+/* Pulsing state when workout is active */
+.active {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .fab {
+    bottom: var(--space-8);
+    right: var(--space-8);
+  }
+}

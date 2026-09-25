@@ -1,0 +1,82 @@
+/* ============================================================
+   FitTrack — Bottom Sheet Component
+   ============================================================ */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: var(--backdrop);
+  z-index: var(--z-sheet);
+  animation: fadeIn var(--transition-fast) ease-out;
+}
+
+.sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  z-index: var(--z-sheet);
+  animation: slideUp var(--transition-slow) ease-out;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.dragHandle {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-3) 0 var(--space-2);
+  flex-shrink: 0;
+}
+
+.dragBar {
+  width: 32px;
+  height: 3px;
+  background: var(--text-muted);
+  border-radius: var(--radius-full);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4) var(--space-3);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--text-primary);
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.closeButton:hover {
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+}
+
+.content {
+  padding: 0 var(--space-4) var(--space-4);
+  overflow-y: auto;
+  flex: 1;
+  padding-bottom: calc(var(--space-4) + var(--safe-area-bottom));
+}
+
+/* Full height variant */
+.full {
+  max-height: 92vh;
+}
